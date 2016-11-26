@@ -48,3 +48,4 @@ gnuplot -persist <<- EOF
 EOF
 clear
 echo "please check this url in browser : http://$IP/benchmark.png"
+
