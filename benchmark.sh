@@ -3,7 +3,7 @@
 #Coded By : shahinst
 #Version : 0.01
 
-IP="/sbin/ifconfig|grep inet|head -1|sed 's/\:/ /'|awk '{print $3}'"
+IP="`ifconfig eth0 2>/dev/null|awk '/inet addr:/ {print $2}'|sed 's/addr://'`"
 ###Install Gnupilot###
 echo -n "Do you want to install gnupilot(y,n) : "
 	read yesorno
